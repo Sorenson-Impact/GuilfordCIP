@@ -9,6 +9,7 @@ library(plotly)
 library(sf)
 library(siverse)
 library(janitor)
+library(scales)
 
 
 # Load data ---------------------------------------------------------------
@@ -2041,11 +2042,19 @@ output$explore_map <- renderLeaflet({
 
     layer <- layer %>% unite(layerid, c("short_title", "geoid"), sep = ":", remove = F)
 
-    popup <- layer %>%
-      transmute(popup = glue("<B>Zip Code: {geoid}</B><BR>
-                           <B>{concept}</B><BR><BR>
+    as_percent <- layer %>% slice(1) %>% pull(as_percent) #Do we need to format as percent?
+    
+    if(!as_percent) {
+      popup <- layer %>%
+        transmute(popup = glue("<B>{concept}</B><BR><BR>
                            {format(est2017, big.mark = ',')}")) %>%
-      pull(popup)
+        pull(popup)
+    } else {
+      popup <- layer %>%
+        transmute(popup = glue("<B>{concept}</B><BR><BR>
+                           {scales::percent(est2017)}")) %>%
+        pull(popup)
+    }
 
 
     exploremap <<- exploremap %>%
@@ -2131,11 +2140,22 @@ output$compare <- renderLeaflet({
     group <- layer %>% slice(1) %>% pull(short_title)
 
     layerid <- layer %>% slice(1) %>% pull(short_title)
-
-    popup <- layer %>%
-      transmute(popup = glue("<B>{concept}</B><BR><BR>
+    
+    as_percent <- layer %>% slice(1) %>% pull(as_percent) #Do we need to format as percent?
+    
+    if(!as_percent) {
+      popup <- layer %>%
+        transmute(popup = glue("<B>{concept}</B><BR><BR>
                            Change from {shiny_selected_year1()} to {shiny_selected_year2()}: {format(estimate, big.mark = ',')}")) %>%
-      pull(popup)
+        pull(popup)
+    } else {
+      popup <- layer %>%
+        transmute(popup = glue("<B>{concept}</B><BR><BR>
+                           Change from {shiny_selected_year1()} to {shiny_selected_year2()}: {scales::percent(estimate)}")) %>%
+        pull(popup)
+    }
+
+    
 
 
     comparemap <<- comparemap %>%
