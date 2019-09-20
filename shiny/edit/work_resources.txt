@@ -1,0 +1,7 @@
+Enter resources for work tab here, each resource on a new line
+
+"<a href= "https://greensboro.org/"> "Greensboro Chamber of Commerce"</a>"
+"<a href= "https://www.bhpchamber.org/"> "Business High Point Chamber of Commerce"</a>"
+"<a href= "http://guilfordworks.org/"> " Guilford County Workforce Development Board"</a>"
+"<a href= "https://www.guilfordapprenticeship.com/"> "Guilford Apprenticeship Partners"</a>"
+"<a href= "https://www.ncworks.gov/vosnet/Default.aspx"> "NC Works Online"</a>"

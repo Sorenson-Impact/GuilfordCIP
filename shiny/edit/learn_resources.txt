@@ -1,0 +1,4 @@
+Enter resources for learn tab here, each resource on a new line
+
+<a href= "https://www.luminafoundation.org/"> "Lumina Foundation"</a>
+<a href= "https://getreadyguilford.org/"> "Ready for School, Ready for Life"</a>

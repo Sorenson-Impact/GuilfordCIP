@@ -1,0 +1,3 @@
+Projects can be listed here. The list can be edited easily from github.
+Project 1
+Project 2

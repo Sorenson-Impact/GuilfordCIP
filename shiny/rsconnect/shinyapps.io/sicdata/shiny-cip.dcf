@@ -1,0 +1,12 @@
+name: shiny-cip
+title: shiny-cip
+username:
+account: sicdata
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 983793
+bundleId: 2429141
+url: https://sicdata.shinyapps.io/shiny-cip/
+when: 1568979663.56607
+asMultiple: FALSE
+asStatic: FALSE

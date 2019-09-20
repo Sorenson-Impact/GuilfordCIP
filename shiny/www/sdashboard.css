@@ -1,0 +1,476 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+
+.h1, h1 {
+  font-family: 'Roboto Condensed', sans-serif;
+  
+}
+
+.h2, h2 {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* plot tiles */
+.h3, h3{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 20px;
+}
+
+
+.h5 {
+  font-family: 'Lato', sans-serif;
+}
+
+
+/* for data source */
+.h6, h6 {
+  font-family: 'Lato', sans-serif;
+  color: #999999;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}
+
+
+
+/* Font Color within Tabs */
+
+a[data-value="DEMOGRAPHICS"] {
+  color:#B42025;
+}
+
+
+a[data-value="LIVE"] {
+  color:#50D1D8;
+}
+
+a[data-value="WORK"] {
+  color:#026BC1;
+}
+
+a[data-value="PLAY"] {
+  color:#FFC91D;
+}
+
+a[data-value="LEARN"] {
+  color:#61AA43;
+}
+
+a[data-value="ENGAGE"] {
+  color:#FF5A27;
+}
+
+a[data-value="EXPLORE"] {
+  color:#00544E;
+}
+
+a[data-value="ABOUT US"] {
+  color:black;
+}
+
+
+.demographics-tab h1, .demographics-tab h2, .demographics-tab h3, .demographics-tab h4 {
+	color: #B42025 ;
+}
+
+
+.live-tab h1, .live-tab h2, .live-tab h3, .live-tab h4 {
+	color: #50D1D8 ;
+}
+
+
+.work-tab h1, .work-tab h2, .work-tab h3, .work-tab h4  {
+	color: #026BC1;
+}
+
+
+.play-tab h1, .play-tab h2, .play-tab h3, .play-tab h4 {
+	color: #FFC91D ;
+}
+
+
+.learn-tab h1, .learn-tab h2, .learn-tab h3, .learn-tab h4  {
+	color: #61AA43;
+}
+
+.engage-tab h1, .engage-tab h2, .engage-tab h3, .engage-tab h4 {
+	color: #FF5A27 ;
+}
+
+
+.explore-tab h1, .explore-tab h2, .explore-tab h3, .explore-tab h4  {
+	color: #00544E;
+}
+
+
+
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #333;
+    cursor: default;
+    background-color: #dddddd;
+    border: 0px;
+    border-bottom-color: transparent;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+
+.main-header {
+    height: 70px;
+}
+
+.content-wrapper{
+  background-color: #ffffff;
+}
+
+
+
+.getBox {
+  width :100%;
+}
+
+.getImage{
+  width :100%;
+}
+
+.footerBox{
+  text-align: center;
+  font-size: 10px;
+  background-color: #F5F5F5;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.content {
+    min-height: 250px;
+    padding: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: auto;
+    padding-right: auto;
+}
+
+.demographics-tab .row {
+  padding-left: 10px;
+  
+}
+
+.box-body .fa-10x{
+  font-size: 7em;
+  position: relative;
+}
+
+/* Center align box titles*/
+.box-header .box-title{
+  text-align: center;
+  font-size: 2.5em;
+}
+
+
+
+
+
+header.main-header {
+  position: relative;
+  width: 100%;
+  height: 70px;
+}
+
+header.main-header .navbar .navbar-custom-menu ul.navbar-nav li.dropdown img {
+  width: auto;
+  height: 70px;
+  
+  top: 0;
+  right: 0;
+  left: 0;
+  right: 0;
+}
+
+.sidebar-menu>.fa{
+	color: #ffffff
+}
+
+.bg-orange {
+background-color: #FCEDE8!important;
+}
+
+.leInfo {
+max-width: 100%;
+height: auto;
+width: 100%;
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 20px;
+}
+
+
+.popAge {
+  
+  width: 100%;
+  max-width:  100%;
+  height: auto;
+}
+
+.bannerImg{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.myFrame {
+  
+  padding:  100px 0;
+  width: 100%;
+  max-width:  100%;
+  height: auto;
+}
+
+.tourismInfo {
+  width:  100%;
+  max-width: 100%;
+  height: auto;
+}
+
+    
+    
+.box .boxText {
+  text-align: left;
+  
+}
+  
+.logoImg{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   width:  15%;
+   height: auto;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.live02{
+  width: 90%;
+  height: auto;
+  vertical-align: center;
+}
+
+
+.live01{
+  width: 85%;
+  height: auto;
+  vertical-align: left;
+}
+
+.live03{
+  width: 75%;
+  height: auto;
+  vertical-align: center;
+}
+
+
+.subtitle h1{
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-size: 100px;
+}
+
+
+.work01{
+  width: 90%;
+  height: auto;
+  
+}
+
+.work02{
+  width: 90%;
+  height: auto;
+  
+}
+
+.learn01{
+   width: 100%;
+  height: auto;
+}
+
+.learn02{
+   width: 100%;
+  height: auto;
+}
+
+
+.engage01{
+   width: 100%;
+  height: auto;
+}
+
+.play01{
+  width:90%;
+  height: auto;
+  
+}
+
+.play02{
+  width:90%;
+  height: auto;
+  
+}
+
+.play03{
+  width:90%;
+  height: auto;
+  
+}
+
+.subtitle {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 40px;
+}
+
+.lineImg {
+  display: block;
+  margin-right: 0;
+  margin-left: 0;
+  width: 100%;
+}
+
+
+
+
+.sec-bannerImg{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* centering Tabs and adjusting font size */
+
+.nav-tabs > li {
+    float:none;
+    display:inline-block;
+    zoom:1;
+}
+
+.nav-tabs {
+    text-align:center;
+     border-bottom: 0;
+}
+
+
+.nav {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 25px;
+}
+
+
+.well {
+    min-height: 10px;
+    padding: 0;
+    margin-bottom: 0;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 1px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+}
+
+.errorText{
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+  
+.btn-liveMenu{
+  color:#50D1D8;
+  border-color: rgba(255,255,255,0);
+  font-size: 25px;
+  text-align: left;
+}
+
+.btn-playMenu{
+  color:#FFC91D;
+  border-color: rgba(255,255,255,0);
+  font-size: 25px;
+  text-align: left;
+  
+}
+
+.btn-engageMenu{
+  color:#ff5a27;
+  border-color: rgba(255,255,255,0);
+  font-size: 25px;
+  text-align: left;
+  
+}
+
+.vertcol{
+  vertical-align: center;
+}
+
+.snapImg{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 75%;
+  max-width: 100%;
+  height: auto;
+}
+
+.diabetesImg{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 75%;
+  max-width: 100%;
+  height: auto;
+}
+
+.all_logosImg{
+  width: 75%;
+  max-width: 100%;
+  height: auto;
+}
+  
+
+
+.verticalLineLive {
+  border-left:solid #50D1D8;
+}
+
+.verticalLineWork {
+  border-left:solid #026BC1;
+}
+.verticalLinePlay {
+  border-left:solid #FFC91D;
+}
+.verticalLineEngage {
+  border-left:solid #FF5A27;
+}
+.verticalLineLearn {
+  border-left:solid #61AA43;
+}
+
+
+
+.missingText {
+  font-style: italic;
+  color: #999999;
+}
