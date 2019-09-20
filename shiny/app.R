@@ -9,6 +9,7 @@ library(plotly)
 library(sf)
 library(siverse)
 library(janitor)
+library(scales)
 
 
 # Load data ---------------------------------------------------------------
@@ -43,19 +44,16 @@ load("./data/pov_race.rda")
 load("./data/schools.rda")
 load("./data/parks.rda")
 load("./data/food_stores.rda")
-
-
-exploremap <- read_rds("./data/exploremap.rds")
-explore_acsdata <- read_rds("./data/explore_acsdata.rds")
+load("./data/explore_acsdata.rda")
 
 
 
 # Editable text files
-live_resources <- read_csv("./edit/live_resources.txt")
-work_resources <- read_csv("./edit/work_resources.txt")
-play_resources <- read_csv("./edit/play_resources.txt")
-learn_resources <- read_csv("./edit/learn_resources.txt")
-engage_resources <- read_csv("./edit/engage_resources.txt")
+live_resources <- read_csv("https://raw.githubusercontent.com/Sorenson-Impact/GuilfordCIP/master/shiny/edit/live_resources.txt")
+work_resources <- read_csv("https://raw.githubusercontent.com/Sorenson-Impact/GuilfordCIP/master/shiny/edit/work_resources.txt")
+play_resources <- read_csv("https://raw.githubusercontent.com/Sorenson-Impact/GuilfordCIP/master/shiny/edit/play_resources.txt")
+learn_resources <- read_csv("https://raw.githubusercontent.com/Sorenson-Impact/GuilfordCIP/master/shiny/edit/learn_resources.txt")
+engage_resources <- read_csv("https://raw.githubusercontent.com/Sorenson-Impact/GuilfordCIP/master/shiny/edit/engage_resources.txt")
 
 
 
@@ -2044,11 +2042,19 @@ output$explore_map <- renderLeaflet({
 
     layer <- layer %>% unite(layerid, c("short_title", "geoid"), sep = ":", remove = F)
 
-    popup <- layer %>%
-      transmute(popup = glue("<B>Zip Code: {geoid}</B><BR>
-                           <B>{concept}</B><BR><BR>
+    as_percent <- layer %>% slice(1) %>% pull(as_percent) #Do we need to format as percent?
+    
+    if(!as_percent) {
+      popup <- layer %>%
+        transmute(popup = glue("<B>{concept}</B><BR><BR>
                            {format(est2017, big.mark = ',')}")) %>%
-      pull(popup)
+        pull(popup)
+    } else {
+      popup <- layer %>%
+        transmute(popup = glue("<B>{concept}</B><BR><BR>
+                           {scales::percent(est2017)}")) %>%
+        pull(popup)
+    }
 
 
     exploremap <<- exploremap %>%
@@ -2134,11 +2140,22 @@ output$compare <- renderLeaflet({
     group <- layer %>% slice(1) %>% pull(short_title)
 
     layerid <- layer %>% slice(1) %>% pull(short_title)
-
-    popup <- layer %>%
-      transmute(popup = glue("<B>{concept}</B><BR><BR>
+    
+    as_percent <- layer %>% slice(1) %>% pull(as_percent) #Do we need to format as percent?
+    
+    if(!as_percent) {
+      popup <- layer %>%
+        transmute(popup = glue("<B>{concept}</B><BR><BR>
                            Change from {shiny_selected_year1()} to {shiny_selected_year2()}: {format(estimate, big.mark = ',')}")) %>%
-      pull(popup)
+        pull(popup)
+    } else {
+      popup <- layer %>%
+        transmute(popup = glue("<B>{concept}</B><BR><BR>
+                           Change from {shiny_selected_year1()} to {shiny_selected_year2()}: {scales::percent(estimate)}")) %>%
+        pull(popup)
+    }
+
+    
 
 
     comparemap <<- comparemap %>%

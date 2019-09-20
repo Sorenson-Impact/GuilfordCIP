@@ -1,8 +1,8 @@
 Enter resources for play tab here, each resource on a new line
 
-<a href= "https://www.piedmontdiscoveryapp.com/"> "Piedmont Discovery"</a>
-<a href= "https://www.greensboro-nc.gov/departments/parks-recreation"> "Greensboro Parks and Recreation"</a>
-<a href= "https://www.highpointnc.gov/368/Parks-Recreation"> "High Point Parks and Recreation"</a>
-<a href= "https://downtowngreenway.org/"> "Downtown Greenway"</a>
-<a href= "https://www.highpointnc.gov/1832/Trails-Greenways"> "High Point Greenways"</a>
-<a href= "https://www.nps.gov/guco/index.htm"> "Guilford Courthouse"</a>
+<a href= "https://www.piedmontdiscoveryapp.com/">Piedmont Discovery</a>
+<a href= "https://www.greensboro-nc.gov/departments/parks-recreation">Greensboro Parks and Recreation</a>
+<a href= "https://www.highpointnc.gov/368/Parks-Recreation">High Point Parks and Recreation</a>
+<a href= "https://downtowngreenway.org/">Downtown Greenway</a>
+<a href= "https://www.highpointnc.gov/1832/Trails-Greenways">High Point Greenways</a>
+<a href= "https://www.nps.gov/guco/index.htm">Guilford Courthouse</a>

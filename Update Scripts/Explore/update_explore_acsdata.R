@@ -13,6 +13,9 @@ most_recent_acs_year <- 2017
 
 #census_api_key("your key here") #do not save key here, run this in console
 
+# Set working directory to the root of the local repo location.  This will likely vary for each computer these scripts are run on:
+setwd("~/Github/GuilfordCIP")
+
 
 # Define Functions ------------------------------------------------------------------------------------------------
 
@@ -161,4 +164,4 @@ explore_acsdata <- explore_tables %>%
     return(combined_table)
   })
 
-write_rds(explore_acsdata, "~/Google Drive/SI/DataScience/data/Guilford County CIP/dashboard/explore_acsdata.rds")
+save(explore_acsdata, file = "./shiny/data/explore_acsdata.rda")
