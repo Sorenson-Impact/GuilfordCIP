@@ -10,7 +10,6 @@ library(sf)
 library(siverse)
 library(janitor)
 
-#idea here: set ht and wdt of chart ad adjust image accordingly
 
 # Load data ---------------------------------------------------------------
 
