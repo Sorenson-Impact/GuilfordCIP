@@ -3,4 +3,3 @@ Enter resources for live tab here, each resource on a new line
 <a href= "http://gis.guilfordcountync.gov/gisportal/"> "Guilford County Map Tools" </a>
 <a href= "http://www.healthyhighpoint.org/resources/"> "Healthy High Point" </a>
 <a href= "https://www.conehealthfoundation.com/foundation/about-us/"> "Cone Health Foundation" </a>
-Test
