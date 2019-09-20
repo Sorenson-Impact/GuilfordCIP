@@ -1,5 +1,5 @@
 Enter resources for live tab here, each resource on a new line
-<a href= "https://www.osbm.nc.gov/facts-figures/demographics"> "State Demographer"</a>
-<a href= "http://gis.guilfordcountync.gov/gisportal/"> "Guilford County Map Tools" </a>
-<a href= "http://www.healthyhighpoint.org/resources/"> "Healthy High Point" </a>
-<a href= "https://www.conehealthfoundation.com/foundation/about-us/"> "Cone Health Foundation" </a>
+<a href= "https://www.osbm.nc.gov/facts-figures/demographics">State Demographer</a>
+<a href= "http://gis.guilfordcountync.gov/gisportal/">Guilford County Map Tools</a>
+<a href= "http://www.healthyhighpoint.org/resources/">Healthy High Point</a>
+<a href= "https://www.conehealthfoundation.com/foundation/about-us/">Cone Health Foundation</a>
