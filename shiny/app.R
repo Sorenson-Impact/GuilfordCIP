@@ -1551,8 +1551,8 @@ output$diabetes <- renderBillboarder({
     pull(indicator_value)
 
   billboarder()%>%
-    bb_gaugechart(val, steps = c(50,100), steps_color = c("#ffc91d", "#ffc91d")) %>%
-    bb_gauge(fullCircle = TRUE, width = 50, label =list(show = F) , startingAngle = -100.5)
+    bb_gauge(fullCircle = TRUE, width = 50 , startingAngle = -100.5) %>% 
+    bb_gaugechart(val, steps = c(50,100), steps_color = c("#ffc91d", "#ffc91d")) 
 
 
 })
@@ -1567,7 +1567,7 @@ output$snap <- renderBillboarder({
 
   billboarder()%>%
     bb_gaugechart(val, steps = c(50,100), steps_color = c("#b42025", "#b42025")) %>%
-    bb_gauge(fullCircle = TRUE, width = 50, label =list(show = F) , startingAngle = -100.5)
+    bb_gauge(fullCircle = TRUE, width = 50, startingAngle = -100.5)
 
 
 })

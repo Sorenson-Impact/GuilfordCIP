@@ -474,3 +474,7 @@ margin-bottom: 20px;
   font-style: italic;
   color: #999999;
 }
+
+.bb-chart-arcs .bb-chart-arcs-gauge-max, .bb-chart-arcs .bb-chart-arcs-gauge-min {
+    fill: #fff;
+}
