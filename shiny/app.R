@@ -287,7 +287,7 @@ body <- mainPanel(width = 12,
                               10,
                               offset = 1,
                               align = "center",
-                              img(src = "./Images/live02.jpg", class = "live02")
+                              img(src = "./Images/live02.JPG", class = "live02")
                             )
                           ),
                           br(),
