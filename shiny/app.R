@@ -43,19 +43,16 @@ load("./data/pov_race.rda")
 load("./data/schools.rda")
 load("./data/parks.rda")
 load("./data/food_stores.rda")
-
-
-exploremap <- read_rds("./data/exploremap.rds")
-explore_acsdata <- read_rds("./data/explore_acsdata.rds")
+load("./data/explore_acsdata.rda")
 
 
 
 # Editable text files
-live_resources <- read_csv("./edit/live_resources.txt")
-work_resources <- read_csv("./edit/work_resources.txt")
-play_resources <- read_csv("./edit/play_resources.txt")
-learn_resources <- read_csv("./edit/learn_resources.txt")
-engage_resources <- read_csv("./edit/engage_resources.txt")
+live_resources <- read_csv("https://raw.githubusercontent.com/Sorenson-Impact/GuilfordCIP/master/shiny/edit/live_resources.txt")
+work_resources <- read_csv("https://raw.githubusercontent.com/Sorenson-Impact/GuilfordCIP/master/shiny/edit/work_resources.txt")
+play_resources <- read_csv("https://raw.githubusercontent.com/Sorenson-Impact/GuilfordCIP/master/shiny/edit/play_resources.txt")
+learn_resources <- read_csv("https://raw.githubusercontent.com/Sorenson-Impact/GuilfordCIP/master/shiny/edit/learn_resources.txt")
+engage_resources <- read_csv("https://raw.githubusercontent.com/Sorenson-Impact/GuilfordCIP/master/shiny/edit/engage_resources.txt")
 
 
 
