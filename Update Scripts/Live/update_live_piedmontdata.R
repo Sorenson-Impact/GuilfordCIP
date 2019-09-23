@@ -7,7 +7,7 @@ library(zoo)
 # Options and Settings --------------------------------------------------------------------------------------------
 
 # Set working directory to the root of the local repo location.  This will likely vary for each computer these scripts are run on:
-setwd("~/Github/Guilford-CIP")
+setwd("~/Github/GuilfordCIP")
 
 # Food insecurity ---------------------------------------------------------
 

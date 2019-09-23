@@ -761,9 +761,8 @@ body <- mainPanel(width = 12,
 
                           fluidRow(
                             column(8,
-                                   "Guilford County is home to many different educational institutions. This page features information about Guilford County Schools that serves students from kindergarten through 12th grade, and our local colleges and universities. It is also important to mention early childhood education which is a growing focus area for this county. Recent investments plan to improve early childhood education, which will help children, families, and the county as a whole.",
-                                   fluidRow(br()),
-                                   "This is an interactive map that can be used to view the school data from each of the Guilford County Schools. In order to learn about a school use the map to zoom in and then click that school. A graph will appear below after a school is selected."
+                                   "Guilford County is home to many different educational institutions. This page features information about Guilford County Schools that serves students from kindergarten through 12th grade, and our local colleges and universities. It is also important to mention early childhood education which is a growing focus area for this county. Recent investments plan to improve early childhood education, which will help children, families, and the county as a whole."
+                                   
                                    ),
                             tags$div(column(4, class ="verticalLineLearn",
                                             align = "left",
@@ -771,7 +770,12 @@ body <- mainPanel(width = 12,
                                      htmlOutput("learn_resources"))
                             )),
                           br(),
-                          br(),
+                          fluidRow(
+                            column(
+                              12, 
+                              "This is an interactive map that can be used to view the school data from each of the Guilford County Schools. In order to learn about a school use the map to zoom in and then click that school. A graph will appear below after a school is selected."
+                            )
+                          ),
                           br(),
                           fluidRow(
                             column(10,
@@ -1549,7 +1553,7 @@ output$diabetes <- renderBillboarder({
     pull(indicator_value)
 
   billboarder()%>%
-    bb_gauge(fullCircle = TRUE, width = 50 , startingAngle = -100.5) %>% 
+    bb_gauge(fullCircle = TRUE, width = 50 , startingAngle = -100.5, min = "") %>% 
     bb_gaugechart(val, steps = c(50,100), steps_color = c("#ffc91d", "#ffc91d")) 
 
 
@@ -1565,7 +1569,7 @@ output$snap <- renderBillboarder({
 
   billboarder()%>%
     bb_gaugechart(val, steps = c(50,100), steps_color = c("#b42025", "#b42025")) %>%
-    bb_gauge(fullCircle = TRUE, width = 50, startingAngle = -100.5)
+    bb_gauge(fullCircle = TRUE, width = 50, startingAngle = -100.5, min = "")
 
 
 })

@@ -10,7 +10,7 @@ options(warnPartialMatchArgs = F)
 # Options and Settings --------------------------------------------------------------------------------------------
 
 # Set working directory to the root of the local repo location.  This will likely vary for each computer these scripts are run on:
-setwd("~/Github/Guilford-CIP")
+setwd("~/Github/GuilfordCIP")
 
 # You will need to set the google api key using the following code in the console.   DO NOT SAVE THE KEY in this file, as it will be visible to anyone on github!  Contact Tara if you do not have the key.
 
@@ -98,7 +98,6 @@ parks <- read_rds("~/Google Drive/SI/DataScience/data/Guilford County CIP/Parks/
 parks %>% arrange(name) %>% View()
 
 parks <- parks %>%
-
   filter(name != "Archdale Park and Recreation Maintenance Dept.") %>%
   filter(name != "B and B Lenten Roses") %>%
   filter(name != "Bur-Mil Clubhouse") %>%
