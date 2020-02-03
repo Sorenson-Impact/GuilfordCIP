@@ -2124,7 +2124,7 @@ output$explore_map <- renderLeaflet({
                       icon = fdicon,
                       clusterOptions = markerClusterOptions(),
                       group = "Food Stores") %>%
-    addAwesomeMarkers(data = schools,
+    addAwesomeMarkers(data = schools %>% distinct(school, lat, lng),
                       icon = scicon,
                       lat = ~lat, lng = ~lng, popup = ~school,
                       clusterOptions = markerClusterOptions(),
@@ -2235,7 +2235,7 @@ output$compare <- renderLeaflet({
                       icon = fdicon,
                       clusterOptions = markerClusterOptions(),
                       group = "Food Stores") %>%
-    addAwesomeMarkers(data = schools,
+    addAwesomeMarkers(data = schools %>% distinct(school, lat, lng),
                       icon = scicon,
                lat = ~lat, lng = ~lng, popup = ~school,
                clusterOptions = markerClusterOptions(),
