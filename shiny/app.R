@@ -1326,10 +1326,10 @@ ui <- fluidPage(theme = "sdashboard.css",
 
 # Define the server -------------------------------------------------------
 server <- function(input, output) {
-  
-  fdicon <- awesomeIcons(icon = 'shopping-cart', iconColor = "#50d1d8", library = 'fa', markerColor = "white")
-  scicon <- awesomeIcons(icon = 'graduation-cap', iconColor = "#61aa43", library = 'fa', markerColor = "white")
-  parkicon <- awesomeIcons(icon = 'tree', iconColor = "#ffc91d", library = 'fa', markerColor = "white")
+
+  fdicon <- awesomeIcons(icon = 'glyphicon glyphicon-shopping-cart', iconColor = "#50d1d8", library = 'glyphicon', markerColor = "white")
+  scicon <- awesomeIcons(icon = 'glyphicon glyphicon-education', iconColor = "#61aa43", library = 'glyphicon', markerColor = "white")
+  parkicon <- awesomeIcons(icon = 'glyphicon glyphicon-tree-deciduous', iconColor = "#ffc91d", library = 'glyphicon', markerColor = "white")
 
   
 
@@ -1532,10 +1532,6 @@ output$vacant_houses_map <- renderLeaflet({
 
 output$food_stores_map <- renderLeaflet({
   
-  fdicon <- awesomeIcons(icon = 'shopping-cart', iconColor = "#50d1d8", library = 'fa', markerColor = "white")
-  scicon <- awesomeIcons(icon = 'graduation-cap', iconColor = "#61aa43", library = 'fa', markerColor = "white")
-  parkicon <- awesomeIcons(icon = 'tree', iconColor = "#ffc91d", library = 'fa', markerColor = "white")
-  
   leaflet(data = food_stores) %>%
     addTiles(urlTemplate = "//{s}.tiles.mapbox.com/v3/jcheng.map-5ebohr46/{z}/{x}/{y}.png",
              attribution = 'Maps by <a href="http://www.mapbox.com/">Mapbox</a>') %>%
@@ -1734,10 +1730,6 @@ output$weather <- renderPlotly({
 
 output$parks_map <- renderLeaflet({
   
-  fdicon <- awesomeIcons(icon = 'shopping-cart', iconColor = "#50d1d8", library = 'fa', markerColor = "white")
-  scicon <- awesomeIcons(icon = 'graduation-cap', iconColor = "#61aa43", library = 'fa', markerColor = "white")
-  parkicon <- awesomeIcons(icon = 'tree', iconColor = "#ffc91d", library = 'fa', markerColor = "white")
-  
   leaflet(data = parks) %>%
     addTiles(urlTemplate = "//{s}.tiles.mapbox.com/v3/jcheng.map-5ebohr46/{z}/{x}/{y}.png",
              attribution = 'Maps by <a href="http://www.mapbox.com/">Mapbox</a>') %>%
@@ -1890,9 +1882,6 @@ output$debt <- renderBillboarder({
 
 output$schools_map <- renderLeaflet({
   
-  fdicon <- awesomeIcons(icon = 'shopping-cart', iconColor = "#50d1d8", library = 'fa', markerColor = "white")
-  scicon <- awesomeIcons(icon = 'graduation-cap', iconColor = "#61aa43", library = 'fa', markerColor = "white")
-  parkicon <- awesomeIcons(icon = 'tree', iconColor = "#ffc91d", library = 'fa', markerColor = "white")
 
   schools %>%
     group_by(school, metric) %>%
@@ -2051,9 +2040,6 @@ output$engage_resources <- renderUI({
 
 output$explore_map <- renderLeaflet({
   
-  fdicon <- awesomeIcons(icon = 'shopping-cart', iconColor = "#50d1d8", library = 'fa', markerColor = "white")
-  scicon <- awesomeIcons(icon = 'graduation-cap', iconColor = "#61aa43", library = 'fa', markerColor = "white")
-  parkicon <- awesomeIcons(icon = 'tree', iconColor = "#ffc91d", library = 'fa', markerColor = "white")
   
   exploremap <- leaflet()
 
@@ -2150,12 +2136,6 @@ shiny_selected_year2 <- reactive({
 
 
 output$compare <- renderLeaflet({
-  
-  
-  fdicon <- awesomeIcons(icon = 'shopping-cart', iconColor = "#50d1d8", library = 'fa', markerColor = "white")
-  scicon <- awesomeIcons(icon = 'graduation-cap', iconColor = "#61aa43", library = 'fa', markerColor = "white")
-  parkicon <- awesomeIcons(icon = 'tree', iconColor = "#ffc91d", library = 'fa', markerColor = "white")
-  
   comparemap <- leaflet()
 
   walk(explore_acsdata, function(layer) {
