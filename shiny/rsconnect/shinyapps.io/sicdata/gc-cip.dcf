@@ -5,8 +5,8 @@ account: sicdata
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 1221712
-bundleId: 2429635
+bundleId: 2566375
 url: https://sicdata.shinyapps.io/gc-cip/
-when: 1568990386.35608
+when: 1572980126.35018
 asMultiple: FALSE
 asStatic: FALSE

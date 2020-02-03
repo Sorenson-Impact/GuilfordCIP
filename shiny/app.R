@@ -49,11 +49,11 @@ load("./data/explore_acsdata.rda")
 
 
 # Editable text files
-live_resources <- read_csv("https://raw.githubusercontent.com/Sorenson-Impact/GuilfordCIP/master/shiny/edit/live_resources.txt")
-work_resources <- read_csv("https://raw.githubusercontent.com/Sorenson-Impact/GuilfordCIP/master/shiny/edit/work_resources.txt")
-play_resources <- read_csv("https://raw.githubusercontent.com/Sorenson-Impact/GuilfordCIP/master/shiny/edit/play_resources.txt")
-learn_resources <- read_csv("https://raw.githubusercontent.com/Sorenson-Impact/GuilfordCIP/master/shiny/edit/learn_resources.txt")
-engage_resources <- read_csv("https://raw.githubusercontent.com/Sorenson-Impact/GuilfordCIP/master/shiny/edit/engage_resources.txt")
+live_resources <- read_csv("./edit/live_resources.txt")
+work_resources <- read_csv("./edit/work_resources.txt")
+play_resources <- read_csv("./edit/play_resources.txt")
+learn_resources <- read_csv("./edit/learn_resources.txt")
+engage_resources <- read_csv("./edit/engage_resources.txt")
 
 
 
@@ -1327,9 +1327,7 @@ ui <- fluidPage(theme = "sdashboard.css",
 # Define the server -------------------------------------------------------
 server <- function(input, output) {
 
-  fdicon <- awesomeIcons(icon = 'shopping-cart', iconColor = "#50d1d8", library = 'fa', markerColor = "white")
-  scicon <- awesomeIcons(icon = 'graduation-cap', iconColor = "#61aa43", library = 'fa', markerColor = "white")
-  parkicon <- awesomeIcons(icon = 'tree', iconColor = "#ffc91d", library = 'fa', markerColor = "white")
+  
 
   # DEMOGRAPHICS Tab ----
 
@@ -1726,6 +1724,11 @@ output$weather <- renderPlotly({
 
 
 output$parks_map <- renderLeaflet({
+  
+  fdicon <- awesomeIcons(icon = 'shopping-cart', iconColor = "#50d1d8", library = 'fa', markerColor = "white")
+  scicon <- awesomeIcons(icon = 'graduation-cap', iconColor = "#61aa43", library = 'fa', markerColor = "white")
+  parkicon <- awesomeIcons(icon = 'tree', iconColor = "#ffc91d", library = 'fa', markerColor = "white")
+  
   leaflet(data = parks) %>%
     addTiles(urlTemplate = "//{s}.tiles.mapbox.com/v3/jcheng.map-5ebohr46/{z}/{x}/{y}.png",
              attribution = 'Maps by <a href="http://www.mapbox.com/">Mapbox</a>') %>%
@@ -1871,6 +1874,10 @@ output$debt <- renderBillboarder({
 })
 
 output$schools_map <- renderLeaflet({
+  
+  fdicon <- awesomeIcons(icon = 'shopping-cart', iconColor = "#50d1d8", library = 'fa', markerColor = "white")
+  scicon <- awesomeIcons(icon = 'graduation-cap', iconColor = "#61aa43", library = 'fa', markerColor = "white")
+  parkicon <- awesomeIcons(icon = 'tree', iconColor = "#ffc91d", library = 'fa', markerColor = "white")
 
   schools %>%
     group_by(school, metric) %>%
@@ -2028,6 +2035,11 @@ output$engage_resources <- renderUI({
 #Explore Map ----
 
 output$explore_map <- renderLeaflet({
+  
+  fdicon <- awesomeIcons(icon = 'shopping-cart', iconColor = "#50d1d8", library = 'fa', markerColor = "white")
+  scicon <- awesomeIcons(icon = 'graduation-cap', iconColor = "#61aa43", library = 'fa', markerColor = "white")
+  parkicon <- awesomeIcons(icon = 'tree', iconColor = "#ffc91d", library = 'fa', markerColor = "white")
+  
   exploremap <- leaflet()
 
   layer <- input$radioinput
@@ -2123,6 +2135,12 @@ shiny_selected_year2 <- reactive({
 
 
 output$compare <- renderLeaflet({
+  
+  
+  fdicon <- awesomeIcons(icon = 'shopping-cart', iconColor = "#50d1d8", library = 'fa', markerColor = "white")
+  scicon <- awesomeIcons(icon = 'graduation-cap', iconColor = "#61aa43", library = 'fa', markerColor = "white")
+  parkicon <- awesomeIcons(icon = 'tree', iconColor = "#ffc91d", library = 'fa', markerColor = "white")
+  
   comparemap <- leaflet()
 
   walk(explore_acsdata, function(layer) {
