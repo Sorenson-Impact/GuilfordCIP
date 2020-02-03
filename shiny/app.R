@@ -7,9 +7,9 @@ library(tidyverse)
 library(leaflet)
 library(plotly)
 library(sf)
-library(siverse)
 library(janitor)
 library(scales)
+library(glue)
 
 
 # Load data ---------------------------------------------------------------
