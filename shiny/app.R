@@ -1326,6 +1326,10 @@ ui <- fluidPage(theme = "sdashboard.css",
 
 # Define the server -------------------------------------------------------
 server <- function(input, output) {
+  
+  fdicon <- awesomeIcons(icon = 'shopping-cart', iconColor = "#50d1d8", library = 'fa', markerColor = "white")
+  scicon <- awesomeIcons(icon = 'graduation-cap', iconColor = "#61aa43", library = 'fa', markerColor = "white")
+  parkicon <- awesomeIcons(icon = 'tree', iconColor = "#ffc91d", library = 'fa', markerColor = "white")
 
   
 
@@ -1527,6 +1531,11 @@ output$vacant_houses_map <- renderLeaflet({
 })
 
 output$food_stores_map <- renderLeaflet({
+  
+  fdicon <- awesomeIcons(icon = 'shopping-cart', iconColor = "#50d1d8", library = 'fa', markerColor = "white")
+  scicon <- awesomeIcons(icon = 'graduation-cap', iconColor = "#61aa43", library = 'fa', markerColor = "white")
+  parkicon <- awesomeIcons(icon = 'tree', iconColor = "#ffc91d", library = 'fa', markerColor = "white")
+  
   leaflet(data = food_stores) %>%
     addTiles(urlTemplate = "//{s}.tiles.mapbox.com/v3/jcheng.map-5ebohr46/{z}/{x}/{y}.png",
              attribution = 'Maps by <a href="http://www.mapbox.com/">Mapbox</a>') %>%
@@ -1822,26 +1831,32 @@ output$retention <- renderBillboarder({
   
   plot <- higher_ed %>% 
     select(instnm, full_time_retention_rate) %>% 
-    mutate(dbt_earn_avg = case_when(str_detect(instnm, "year")~ full_time_retention_rate), 
-           dbt_earn_coll= case_when(!str_detect(instnm, "year")~ full_time_retention_rate 
+    mutate(ret_avg = case_when(str_detect(instnm, "year")~ full_time_retention_rate*100), 
+           ret_coll= case_when(!str_detect(instnm, "year")~ full_time_retention_rate*100 
            )) %>% 
     arrange(full_time_retention_rate)
-
   
-    billboarder() %>% 
+  billboarder() %>% 
     bb_lollipop(data = plot,
-                mapping = bbaes(y = dbt_earn_coll, x = instnm), rotated = F,
+                mapping = bbaes(y = ret_avg, x = instnm), rotated = F,
+                point_color = "#00544e", line_color = "#00544e") %>% 
+    bb_lollipop(data = plot,
+                mapping = bbaes(y = ret_coll, x = instnm), rotated = F,
                 point_color = "#61aa43", line_color = "#61aa43") %>% 
-    bb_scatterplot(data = plot, mapping = bbaes(y = dbt_earn_avg, x = instnm), rotated = F) %>% 
     bb_legend(show = FALSE) %>%
     bb_y_axis(tick = list(text = "", format = suffix("%"))) %>%
     bb_axis(x =list(label = "",height = 75), 
             y = list(label = ""), 
             y2 = list(show = FALSE)) 
+
+  
   
 
+    
+    
 
 })
+
 
 output$debt <- renderBillboarder({
   
